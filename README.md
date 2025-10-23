@@ -1,16 +1,46 @@
-# React + Vite
+#  Student Management System – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of the Student Management System, built using **React.js**.  
+It allows teachers and students to interact with assignments — teachers can create, publish, and review assignments, while students can view and submit their work.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+-  **Teacher Dashboard**
+  - Create, publish, and complete assignments.
+  - View and review student submissions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-  **Student Portal**
+  - View published assignments.
+  - Submit answers before the due date.
 
-## Expanding the ESLint configuration
+- 💡 **Modern UI**
+  - Built with React, Tailwind CSS, and React Hot Toast for notifications.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS, React Router, Axios  
+- **State Management:** React Hooks (`useState`, `useEffect`)  
+- **Notifications:** React Hot Toast  
+- **API Integration:** Axios (connected to Node.js backend)
+
+---
+
+##  Installation & Setup
+
+   ---
+Install dependencies
+```bash 
+npm install
+```
+---
+Run the development server
+
+```bash
+npm run dev
+
+```
+---
