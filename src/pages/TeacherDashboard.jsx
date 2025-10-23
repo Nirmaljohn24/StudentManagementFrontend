@@ -22,7 +22,6 @@ export default function TeacherDashboard() {
       setAssignments(res.data);
     } catch (err) {
       console.error(err);
-      toast.error("Failed to load assignments");
     }
   };
 
@@ -147,7 +146,7 @@ export default function TeacherDashboard() {
     <div className="min-h-screen bg-gray-100 font-inter">
       <Toaster position="top-center" />
 
-      {/* Navbar */}
+      
       <div className="bg-white shadow-md py-3 px-6 flex justify-between items-center sticky top-0">
         <h2 className="text-xl font-bold text-blue-700">Teacher Dashboard</h2>
         <div className="flex items-center gap-4">
@@ -162,7 +161,7 @@ export default function TeacherDashboard() {
       </div>
 
       <main className="max-w-6xl mx-auto p-6 space-y-10">
-        {/* Create Assignment Form */}
+        
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <h2 className="text-lg font-semibold mb-4">Create New Assignment</h2>
           <form onSubmit={handleSubmit} className="space-y-3">
@@ -195,7 +194,7 @@ export default function TeacherDashboard() {
           </form>
         </div>
 
-        {/* Assignment List */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {assignments.map((a) => (
             <div
@@ -217,7 +216,7 @@ export default function TeacherDashboard() {
               </span>
 
               <div className="mt-3 flex flex-wrap gap-2">
-                {/* Draft buttons */}
+                
                 {a.status === "Draft" && (
                   <>
                     <button
@@ -235,7 +234,7 @@ export default function TeacherDashboard() {
                   </>
                 )}
 
-                {/* Published buttons */}
+                
                 {a.status === "Published" && (
                   <button
                     onClick={() => changeStatus(a._id, "Completed")}
@@ -245,14 +244,14 @@ export default function TeacherDashboard() {
                   </button>
                 )}
 
-                {/* Completed: Locked */}
+               
                 {a.status === "Completed" && (
                   <span className="text-gray-500 text-sm px-2 py-1 rounded border border-gray-300">
                     Locked
                   </span>
                 )}
 
-                {/* Toggle submissions */}
+                
                 <button
                   onClick={() => toggleCollapse(a._id)}
                   className="bg-gray-700 text-white px-3 py-1 rounded hover:bg-gray-800"
@@ -261,7 +260,7 @@ export default function TeacherDashboard() {
                 </button>
               </div>
 
-              {/* Collapsible Student Submissions */}
+              
               {collapsedAssignments[a._id] && submissions[a._id] && (
                 <div className="mt-4 border-t pt-3 overflow-hidden transition-all duration-300 ease-in-out">
                   <h4 className="font-semibold mb-2">Student Submissions:</h4>
